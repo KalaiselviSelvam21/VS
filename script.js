@@ -179,7 +179,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Direct to WhatsApp after a brief delay
       setTimeout(() => {
-        window.open(`https://wa.me/917904818177?text=${waMessage}`, '_blank');
+        window.open(`https://wa.me/919092028536?text=${waMessage}`, '_blank');
       }, 900);
     });
   }

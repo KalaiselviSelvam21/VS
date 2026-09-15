@@ -233,6 +233,23 @@ ul {
   color: var(--bg-primary);
 }
 
+.nav-logo-img {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  display: block;
+  object-fit: cover;
+  background-color: #ffffff;
+  border: 1.5px solid rgba(212, 168, 83, 0.5);
+  box-shadow: 0 0 15px rgba(212, 168, 83, 0.35);
+  transition: transform 0.4s var(--ease-spring), box-shadow 0.4s var(--ease-out);
+}
+
+.nav-logo:hover .nav-logo-img {
+  transform: scale(1.08);
+  box-shadow: 0 0 25px rgba(212, 168, 83, 0.55);
+}
+
 .nav-logo-text {
   font-family: var(--font-display);
   font-size: 1.4rem;
