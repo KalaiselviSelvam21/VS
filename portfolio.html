@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio & Showcase | Venus Studio & Gifts — Veppur</title>
+  <meta name="description" content="Explore the portfolio of Venus Studio in Veppur: Wedding photography, custom gifts, luxury albums, 4K cinematography, and wide flex printing showcase.">
+  <meta name="keywords" content="Venus Studio portfolio, photography gallery Veppur, wedding photography samples, custom gift showcase, flex printing portfolio">
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:title" content="Portfolio & Showcase | Venus Studio & Gifts">
+  <meta property="og:description" content="Click through our high-definition gallery of portraits, wedding films, custom gifts, albums, and banners.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/events.jpg">
+
+  <!-- Stylesheet & Favicon -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="images/logo.png">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header>
+    <nav class="navbar" id="navbar">
+      <div class="container">
+        <a href="index.html" class="nav-logo" aria-label="Venus Studio Home">
+          <img src="images/logo.png" alt="Venus Studio Logo" class="nav-logo-img">
+          <span class="nav-logo-text">Venus Studio</span>
+        </a>
+
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="portfolio.html" class="active">Portfolio</a></li>
+          <li><a href="bulk-orders.html">Bulk Orders</a></li>
+          <li><a href="contact.html" class="nav-cta">Book Now</a></li>
+        </ul>
+
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Subpage Hero Banner -->
+    <section class="page-hero">
+      <div class="container">
+        <div class="hero-badge">
+          <span class="dot"></span>
+          <span>Visual Showcase</span>
+        </div>
+        <h1 class="page-hero-title">Moments We've Immortalized</h1>
+        <p class="page-hero-subtitle">
+          Browse through our curated gallery of weddings, custom keepsakes, designer photobooks, and commercial flex printing. Click any photo to inspect in full HD.
+        </p>
+        <div class="breadcrumb">
+          <a href="index.html">Home</a>
+          <span class="breadcrumb-sep">/</span>
+          <span class="breadcrumb-active">Portfolio</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Filterable Gallery Section -->
+    <section class="gallery" style="padding: 70px 0 100px;">
+      <div class="container">
+
+        <!-- Category Filter Buttons -->
+        <div class="portfolio-filters reveal">
+          <button class="filter-btn active" data-filter="all">All Works</button>
+          <button class="filter-btn" data-filter="events">Weddings & Events</button>
+          <button class="filter-btn" data-filter="studio">Studio Portraits</button>
+          <button class="filter-btn" data-filter="gifts">Custom Gifts</button>
+          <button class="filter-btn" data-filter="album">Designer Albums</button>
+          <button class="filter-btn" data-filter="videography">Videography</button>
+          <button class="filter-btn" data-filter="flex">Flex & Banners</button>
+        </div>
+
+        <!-- Gallery Grid -->
+        <div class="gallery-grid">
+          <!-- Item 1: Events -->
+          <div class="gallery-item reveal" data-category="events" data-src="images/events.jpg">
+            <span class="gallery-tag">Weddings</span>
+            <img src="images/events.jpg" alt="Traditional South Indian Wedding Ceremony" loading="lazy">
+            <div class="gallery-info">
+              <h4>Traditional Mandap & Wedding</h4>
+              <p>Veppur Grand Reception Coverage</p>
+            </div>
+            <div class="gallery-item-overlay">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+            </div>
+          </div>
+
+          <!-- Item 2: Gifts -->
+          <div class="gallery-item reveal" data-category="gifts" data-src="images/gifts.jpg">
+            <span class="gallery-tag">Custom Gifts</span>
+            <img src="images/gifts.jpg" alt="Customised Gift Collection and Photo Frames" loading="lazy">
+            <div class="gallery-info">
+              <h4>Personalized Gift Sets</h4>
+              <p>Custom Ceramic Mugs & Crystal Frames</p>
+            </div>
+            <div class="gallery-item-overlay">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+            </div>
+          </div>
+
+          <!-- Item 3: Album -->
+          <div class="gallery-item reveal" data-category="album" data-src="images/album.jpg">
+            <span class="gallery-tag">Albums</span>
+            <img src="images/album.jpg" alt="Luxury Handcrafted Lay-Flat Wedding Album" loading="lazy">
+            <div class="gallery-info">
+              <h4>Italian Leather Wedding Photobook</h4>
+              <p>Non-tear Metallic Lay-Flat Pages</p>
+            </div>
+            <div class="gallery-item-overlay">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+            </div>
+          </div>
+
+          <!-- Item 4: Videography -->
+          <div class="gallery-item reveal" data-category="videography" data-src="images/videography.jpg">
+            <span class="gallery-tag">Cinematic Video</span>
+            <img src="images/videography.jpg" alt="4K Cinematic Drone and Video Camera Setup" loading="lazy">
+            <div class="gallery-info">
+              <h4>4K Aerial & Gimbal Videography</h4>
+              <p>Multi-camera Reception Highlights</p>
+            </div>
+            <div class="gallery-item-overlay">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+            </div>
+          </div>
+
+          <!-- Item 5: Flex -->
+          <div class="gallery-item reveal" data-category="flex" data-src="images/flex.jpg">
+            <span class="gallery-tag">Flex Printing</span>
+            <img src="images/flex.jpg" alt="Large Format Digital Flex Banner Printing" loading="lazy">
+            <div class="gallery-info">
+              <h4>Festival & Wedding Arch Flex</h4>
+              <p>Wide-Format Weatherproof Printing</p>
+            </div>
+            <div class="gallery-item-overlay">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+            </div>
+          </div>
+
+          <!-- Item 6: Studio -->
+          <div class="gallery-item reveal" data-category="studio" data-src="images/studio.jpg">
+            <span class="gallery-tag">Studio Shoot</span>
+            <img src="images/studio.jpg" alt="Indoor Photography Studio and Lighting" loading="lazy">
+            <div class="gallery-info">
+              <h4>Professional Studio Floor</h4>
+              <p>Matrimonial & Fashion Portraiture</p>
+            </div>
+            <div class="gallery-item-overlay">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+            </div>
+          </div>
+
+          <!-- Item 7: Bulk Gifts -->
+          <div class="gallery-item reveal" data-category="gifts" data-src="images/bulk.jpg">
+            <span class="gallery-tag">Bulk Gifts</span>
+            <img src="images/bulk.jpg" alt="Bulk packaging of corporate gift items" loading="lazy">
+            <div class="gallery-info">
+              <h4>Corporate & Return Gift Packs</h4>
+              <p>150+ Packaged Mugs & Trophies</p>
+            </div>
+            <div class="gallery-item-overlay">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+            </div>
+          </div>
+
+          <!-- Item 8: Studio Gear -->
+          <div class="gallery-item reveal" data-category="studio" data-src="images/hero.jpg">
+            <span class="gallery-tag">Gear Setup</span>
+            <img src="images/hero.jpg" alt="Professional Camera & Optical Gear Rig" loading="lazy">
+            <div class="gallery-info">
+              <h4>Flagship Full-Frame Rig</h4>
+              <p>Ultra-HD Optical Production</p>
+            </div>
+            <div class="gallery-item-overlay">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- Lightbox Modal -->
+        <div class="lightbox" id="lightbox">
+          <button class="lightbox-close" id="lightboxClose" aria-label="Close image">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+          </button>
+          <img id="lightboxImg" src="" alt="Fullscreen preview">
+        </div>
+
+        <!-- CTA Banner -->
+        <div class="cta-banner reveal">
+          <h2>Love What You See?</h2>
+          <p>Bring your vision to Venus Studio. Let's create breathtaking photography and unforgettable personalized keepsakes together.</p>
+          <div class="cta-banner-buttons">
+            <a href="contact.html" class="btn btn-primary">Book Your Session</a>
+            <a href="https://wa.me/919092028536?text=Hi%20Venus%20Studio,%20I%20loved%20your%20portfolio%20and%20want%20to%20discuss%20a%20project" target="_blank" rel="noopener" class="btn btn-secondary">WhatsApp Us</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="nav-logo">
+            <img src="images/logo.png" alt="Venus Studio Logo" class="nav-logo-img">
+            <span class="nav-logo-text">Venus Studio</span>
+          </div>
+          <p>Veppur's trusted photography studio and customized gifting destination. Celebrating life's precious moments since over a decade.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="services.html#photography">Studio Photography</a></li>
+            <li><a href="services.html#gifts">Customised Gifts</a></li>
+            <li><a href="services.html#album">Album Making</a></li>
+            <li><a href="services.html#videography">Cinematic Video</a></li>
+            <li><a href="services.html#flex">Flex Printing</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="bulk-orders.html">Bulk Orders</a></li>
+            <li><a href="contact.html">Contact & Location</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li>Main Road, X Road, Veppur, Tamil Nadu 606304</li>
+            <li><a href="tel:09994494537">099944 94537</a></li>
+            <li><a href="https://wa.me/919092028536" target="_blank" rel="noopener">WhatsApp: +91 90920 28536</a></li>
+            <li>Open Daily till 10 PM</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Venus Studio. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="index.html">Home</a>
+          <a href="services.html">Services</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Action Button -->
+  <a href="https://wa.me/919092028536?text=Hi%20Venus%20Studio,%20I%20would%20like%20to%20know%20more%20about%20your%20services" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Chat with Venus Studio on WhatsApp">
+    <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372s-1.04 1.015-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+    <span class="tooltip">Chat with Venus Studio</span>
+  </a>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>

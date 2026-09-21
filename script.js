@@ -146,41 +146,106 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // 7. Booking / Inquiry Form with WhatsApp Bridge
-  const quoteForm = document.getElementById('quoteForm');
-  const formSuccess = document.getElementById('formSuccess');
+  const setupFormBridge = (formId, successId, titlePrefix) => {
+    const form = document.getElementById(formId);
+    const success = document.getElementById(successId);
 
-  if (quoteForm) {
-    quoteForm.addEventListener('submit', (e) => {
-      e.preventDefault();
+    if (form) {
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
 
-      const name = document.getElementById('name').value.trim();
-      const phone = document.getElementById('phone').value.trim();
-      const service = document.getElementById('service').value;
-      const date = document.getElementById('date').value;
-      const message = document.getElementById('message').value.trim();
+        const name = (form.querySelector('[name="name"]') || {}).value || '';
+        const phone = (form.querySelector('[name="phone"]') || {}).value || '';
+        const service = (form.querySelector('[name="service"]') || {}).value || '';
+        const date = (form.querySelector('[name="date"]') || {}).value || '';
+        const quantity = (form.querySelector('[name="quantity"]') || {}).value || '';
+        const message = (form.querySelector('[name="message"]') || {}).value || '';
 
-      // Build formatted WhatsApp message
-      let waMessage = `*New Inquiry - Venus Studio*%0A%0A`;
-      waMessage += `*Name:* ${encodeURIComponent(name)}%0A`;
-      waMessage += `*Phone:* ${encodeURIComponent(phone)}%0A`;
-      waMessage += `*Service:* ${encodeURIComponent(service)}%0A`;
-      if (date) {
-        waMessage += `*Expected Date:* ${encodeURIComponent(date)}%0A`;
-      }
-      if (message) {
-        waMessage += `*Details:* ${encodeURIComponent(message)}%0A`;
-      }
+        // Build formatted WhatsApp message
+        let waMessage = `*${titlePrefix} - Venus Studio*%0A%0A`;
+        if (name) waMessage += `*Name:* ${encodeURIComponent(name.trim())}%0A`;
+        if (phone) waMessage += `*Phone:* ${encodeURIComponent(phone.trim())}%0A`;
+        if (service) waMessage += `*Service/Category:* ${encodeURIComponent(service)}%0A`;
+        if (quantity) waMessage += `*Quantity:* ${encodeURIComponent(quantity.trim())}%0A`;
+        if (date) waMessage += `*Target Date:* ${encodeURIComponent(date)}%0A`;
+        if (message) waMessage += `*Details:* ${encodeURIComponent(message.trim())}%0A`;
 
-      // Show success state
-      quoteForm.style.display = 'none';
-      if (formSuccess) {
-        formSuccess.classList.add('show');
-      }
+        // Show success state
+        form.style.display = 'none';
+        if (success) {
+          success.classList.add('show');
+        }
 
-      // Direct to WhatsApp after a brief delay
-      setTimeout(() => {
-        window.open(`https://wa.me/919092028536?text=${waMessage}`, '_blank');
-      }, 900);
+        // Direct to WhatsApp after a brief delay
+        setTimeout(() => {
+          window.open(`https://wa.me/919092028536?text=${waMessage}`, '_blank');
+        }, 800);
+      });
+    }
+  };
+
+  setupFormBridge('quoteForm', 'formSuccess', 'New Service Inquiry');
+  setupFormBridge('contactForm', 'contactSuccess', 'New Contact Booking');
+  setupFormBridge('bulkQuoteForm', 'bulkSuccess', 'Bulk Order Inquiry');
+
+  // 8. Portfolio Category Filtering
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const portfolioItems = document.querySelectorAll('.gallery-grid .gallery-item');
+
+  if (filterBtns.length > 0 && portfolioItems.length > 0) {
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const category = btn.getAttribute('data-filter');
+
+        portfolioItems.forEach(item => {
+          const itemCat = item.getAttribute('data-category');
+          if (category === 'all' || itemCat === category || (itemCat && itemCat.includes(category))) {
+            item.classList.remove('hidden');
+            item.style.animation = 'fadeIn 0.4s ease forwards';
+          } else {
+            item.classList.add('hidden');
+          }
+        });
+      });
     });
   }
+
+  // 9. FAQ Accordion Interaction
+  const faqQuestions = document.querySelectorAll('.faq-question');
+  faqQuestions.forEach(question => {
+    question.addEventListener('click', () => {
+      const item = question.parentElement;
+      const isActive = item.classList.contains('active');
+
+      // Close all other active items
+      document.querySelectorAll('.faq-item.active').forEach(openItem => {
+        if (openItem !== item) {
+          openItem.classList.remove('active');
+        }
+      });
+
+      // Toggle current item
+      item.classList.toggle('active', !isActive);
+    });
+  });
+
+  // 10. URL Query Param Pre-Selection for Service Dropdown
+  const urlParams = new URLSearchParams(window.location.search);
+  const selectedServiceParam = urlParams.get('service');
+  if (selectedServiceParam) {
+    const serviceSelect = document.getElementById('contactService') || document.getElementById('service');
+    if (serviceSelect) {
+      for (let i = 0; i < serviceSelect.options.length; i++) {
+        if (serviceSelect.options[i].value.toLowerCase().includes(selectedServiceParam.toLowerCase())) {
+          serviceSelect.selectedIndex = i;
+          break;
+        }
+      }
+    }
+  }
 });
+
+
