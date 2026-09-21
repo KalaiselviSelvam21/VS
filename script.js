@@ -246,6 +246,80 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
   }
+
+  // 11. Founder Page Language Switcher (Tamil / English)
+  const langBtns = document.querySelectorAll('.lang-btn');
+  if (langBtns.length > 0) {
+    const setLanguage = (lang) => {
+      document.body.classList.remove('lang-ta', 'lang-en');
+      document.body.classList.add('lang-' + lang);
+
+      langBtns.forEach(btn => {
+        btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+      });
+
+      if (lang === 'ta') {
+        document.title = "SENTHIL (செந்தில்) – நிறுவனர் & வழிகாட்டி | VENUS STUDIO";
+      } else {
+        document.title = "SENTHIL – Founder & Creative Photographer | VENUS STUDIO";
+      }
+
+      try {
+        localStorage.setItem('venus_founder_lang', lang);
+      } catch (err) {
+        // localStorage fallback
+      }
+    };
+
+    // Load stored language or default to Tamil ('ta')
+    let currentLang = 'ta';
+    try {
+      currentLang = localStorage.getItem('venus_founder_lang') || 'ta';
+    } catch (e) {
+      currentLang = 'ta';
+    }
+    setLanguage(currentLang);
+
+    langBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const lang = btn.getAttribute('data-lang');
+        setLanguage(lang);
+      });
+    });
+  }
+
+  // 12. Black & White Theme Switcher (Dark / Light)
+  const themeToggleBtn = document.getElementById('themeToggle');
+  const applyTheme = (theme) => {
+    document.documentElement.setAttribute('data-theme', theme);
+    if (themeToggleBtn) {
+      themeToggleBtn.setAttribute('title', theme === 'light' ? 'Switch to Black (Dark) Theme' : 'Switch to White (Light) Theme');
+      themeToggleBtn.setAttribute('aria-label', theme === 'light' ? 'Switch to Black (Dark) Theme' : 'Switch to White (Light) Theme');
+    }
+    try {
+      localStorage.setItem('venus_theme', theme);
+    } catch (e) {
+      // localStorage fallback
+    }
+  };
+
+  // Initialize theme from localStorage or default to dark
+  let savedTheme = 'dark';
+  try {
+    savedTheme = localStorage.getItem('venus_theme') || 'dark';
+  } catch (e) {
+    savedTheme = 'dark';
+  }
+  applyTheme(savedTheme);
+
+  if (themeToggleBtn) {
+    themeToggleBtn.addEventListener('click', () => {
+      const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+      const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+      applyTheme(newTheme);
+    });
+  }
 });
+
 
 

@@ -16,6 +16,14 @@
   <!-- Stylesheet & Favicon -->
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" type="image/png" href="images/logo.png">
+  <script>
+    (function() {
+      try {
+        var theme = localStorage.getItem('venus_theme') || 'dark';
+        document.documentElement.setAttribute('data-theme', theme);
+      } catch (e) {}
+    })();
+  </script>
 </head>
 <body>
 
@@ -31,17 +39,25 @@
         <ul class="nav-links" id="navLinks">
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
+          <li><a href="founder.html">Founder</a></li>
           <li><a href="services.html">Services</a></li>
           <li><a href="portfolio.html" class="active">Portfolio</a></li>
           <li><a href="bulk-orders.html">Bulk Orders</a></li>
           <li><a href="contact.html" class="nav-cta">Book Now</a></li>
         </ul>
 
-        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
+        <div class="nav-actions">
+          <button class="theme-toggle-btn" id="themeToggle" aria-label="Toggle Black/White Theme" title="Toggle Black/White Theme">
+            <span class="theme-icon-light">☀️</span>
+            <span class="theme-icon-dark">🌙</span>
+          </button>
+
+          <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
       </div>
     </nav>
   </header>
@@ -79,6 +95,7 @@
           <button class="filter-btn" data-filter="album">Designer Albums</button>
           <button class="filter-btn" data-filter="videography">Videography</button>
           <button class="filter-btn" data-filter="flex">Flex & Banners</button>
+          <button class="filter-btn" data-filter="ai">AI Creative</button>
         </div>
 
         <!-- Gallery Grid -->
@@ -219,27 +236,28 @@
             <img src="images/logo.png" alt="Venus Studio Logo" class="nav-logo-img">
             <span class="nav-logo-text">Venus Studio</span>
           </div>
-          <p>Veppur's trusted photography studio and customized gifting destination. Celebrating life's precious moments since over a decade.</p>
+          <p>Veppur's trusted photography studio and customized gifting destination. Led by SENTHIL (20+ Years Experience, Photography Mentor & AI Trainer).</p>
         </div>
 
         <div class="footer-col">
           <h4>Services</h4>
           <ul>
-            <li><a href="services.html#photography">Studio Photography</a></li>
+            <li><a href="services.html#photography">Photography & Stills</a></li>
+            <li><a href="services.html#videography">Video & Cinematic</a></li>
+            <li><a href="services.html#album">Albums & Frames</a></li>
+            <li><a href="services.html#ai-creative">AI Creative & Restoration</a></li>
             <li><a href="services.html#gifts">Customised Gifts</a></li>
-            <li><a href="services.html#album">Album Making</a></li>
-            <li><a href="services.html#videography">Cinematic Video</a></li>
-            <li><a href="services.html#flex">Flex Printing</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
           <h4>Quick Links</h4>
           <ul>
+            <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About Us</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="founder.html">Founder Profile</a></li>
+            <li><a href="services.html">All Services</a></li>
             <li><a href="bulk-orders.html">Bulk Orders</a></li>
-            <li><a href="contact.html">Contact & Location</a></li>
           </ul>
         </div>
 
@@ -247,7 +265,8 @@
           <h4>Contact</h4>
           <ul>
             <li>Main Road, X Road, Veppur, Tamil Nadu 606304</li>
-            <li><a href="tel:09994494537">099944 94537</a></li>
+            <li><a href="tel:09994494537">📞 99944 94537</a></li>
+            <li><a href="tel:07904036209">📞 79040 36209</a></li>
             <li><a href="https://wa.me/919092028536" target="_blank" rel="noopener">WhatsApp: +91 90920 28536</a></li>
             <li>Open Daily till 10 PM</li>
           </ul>
@@ -255,9 +274,10 @@
       </div>
 
       <div class="footer-bottom">
-        <p>&copy; 2026 Venus Studio. All rights reserved.</p>
+        <p>&copy; 2026 Venus Studio. All rights reserved. “தரம்... தலைமுறைக்கும்!”</p>
         <div class="footer-bottom-links">
           <a href="index.html">Home</a>
+          <a href="founder.html">Founder</a>
           <a href="services.html">Services</a>
           <a href="contact.html">Contact</a>
         </div>

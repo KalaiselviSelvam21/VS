@@ -4,18 +4,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Services & Solutions | Venus Studio & Gifts — Veppur</title>
-  <meta name="description" content="Explore complete services at Venus Studio: Indoor Portraiture, Customised Gifts, Wedding Album Making, Cinematic 4K Videography, Flex Printing, and Function Coverage.">
-  <meta name="keywords" content="Venus Studio services, photography services Veppur, custom gifts, photo album making, 4K wedding videography, flex banner printing">
+  <meta name="description" content="Explore complete services at Venus Studio: Photography, Cinematic 4K Video, Albums & Frames, Custom Gifts, Flex Printing, AI Creative Services & Digital Retouching in Veppur.">
+  <meta name="keywords" content="Venus Studio services, wedding photography Veppur, Karizma albums, AI photo restoration, custom gifts, flex printing, 4K video reels">
 
   <!-- Open Graph / Meta -->
   <meta property="og:title" content="Services & Solutions | Venus Studio & Gifts">
-  <meta property="og:description" content="Explore photography, cinematic video, personalized gifts, album design, and large format printing in Veppur.">
+  <meta property="og:description" content="Photography • Videography • Digital Printing • Albums • Frames • Customized Gifts • AI Creative Studio. Veppur.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="images/hero.jpg">
 
   <!-- Stylesheet & Favicon -->
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" type="image/png" href="images/logo.png">
+  <script>
+    (function() {
+      try {
+        var theme = localStorage.getItem('venus_theme') || 'dark';
+        document.documentElement.setAttribute('data-theme', theme);
+      } catch (e) {}
+    })();
+  </script>
 </head>
 <body>
 
@@ -31,17 +39,25 @@
         <ul class="nav-links" id="navLinks">
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
+          <li><a href="founder.html">Founder</a></li>
           <li><a href="services.html" class="active">Services</a></li>
           <li><a href="portfolio.html">Portfolio</a></li>
           <li><a href="bulk-orders.html">Bulk Orders</a></li>
           <li><a href="contact.html" class="nav-cta">Book Now</a></li>
         </ul>
 
-        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
+        <div class="nav-actions">
+          <button class="theme-toggle-btn" id="themeToggle" aria-label="Toggle Black/White Theme" title="Toggle Black/White Theme">
+            <span class="theme-icon-light">☀️</span>
+            <span class="theme-icon-dark">🌙</span>
+          </button>
+
+          <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
       </div>
     </nav>
   </header>
@@ -56,7 +72,7 @@
         </div>
         <h1 class="page-hero-title">Our Studio & Gifting Solutions</h1>
         <p class="page-hero-subtitle">
-          From high-definition studio portraiture to tailored gifts, luxury albums, and wide-format flex printing — explore all we offer in Veppur.
+          Photography • Videography • Digital Printing • Albums • Frames • Customized Gifts • AI Creative Studio
         </p>
         <div class="breadcrumb">
           <a href="index.html">Home</a>
@@ -66,235 +82,429 @@
       </div>
     </section>
 
-    <!-- Detailed Services List -->
-    <section class="container" style="padding: 80px 24px;">
+    <!-- Services Deep Dive List (7 Full Categories) -->
+    <section class="container" style="padding: 70px 24px;">
       <div class="services-deep-list">
 
-        <!-- 1. Photography Studio -->
+        <!-- 1. Photography -->
         <article class="service-detail-card reveal" id="photography">
           <div class="service-detail-image">
-            <img src="images/studio.jpg" alt="Indoor Photography Studio setup at Venus Studio" loading="lazy">
+            <img src="images/studio.jpg" alt="Professional Photography Studio at Venus Studio" loading="lazy">
           </div>
           <div class="service-detail-content">
-            <span class="section-label">Studio Shoots</span>
-            <h3>Photography Studio & Portraits</h3>
+            <span class="section-label">01. Creative Stills</span>
+            <h3>📸 Photography</h3>
             <p>
-              Equipped with professional studio strobes, continuous softboxes, and diverse aesthetic backdrops, our studio creates stunning portraiture. Whether you need matrimonial photos, newborn baby portraits, or instant official passport/visa pictures, we capture your finest angles.
+              From sacred wedding vows and spontaneous candid expressions to studio portraiture and passport photos, we capture life's defining moments with emotional depth and visual clarity.
             </p>
-            <div class="service-feature-checklist">
-              <div class="service-feature-item">
+
+            <div class="service-items-grid">
+              <div class="service-item-chip">
                 <svg viewBox="0 0 24 24" fill="none" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Modeling & Portfolio Shoots</span>
+                <span>Wedding Photography</span>
               </div>
-              <div class="service-feature-item">
+              <div class="service-item-chip">
                 <svg viewBox="0 0 24 24" fill="none" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Matrimonial Photography</span>
+                <span>Candid Photography</span>
               </div>
-              <div class="service-feature-item">
+              <div class="service-item-chip">
                 <svg viewBox="0 0 24 24" fill="none" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Newborn Baby & Kids Themes</span>
+                <span>Traditional Photography</span>
               </div>
-              <div class="service-feature-item">
+              <div class="service-item-chip">
                 <svg viewBox="0 0 24 24" fill="none" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Instant Passport & Visa Photos</span>
+                <span>Pre / Post-Wedding Shoot</span>
+              </div>
+              <div class="service-item-chip">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Outdoor & Location Shoot</span>
+              </div>
+              <div class="service-item-chip">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Baby & Kids Photography</span>
+              </div>
+              <div class="service-item-chip">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Maternity Photography</span>
+              </div>
+              <div class="service-item-chip">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Family Portrait</span>
+              </div>
+              <div class="service-item-chip">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Birthday & All Functions</span>
+              </div>
+              <div class="service-item-chip">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Passport / Visa Photo</span>
               </div>
             </div>
-            <div style="display: flex; gap: 14px; flex-wrap: wrap; margin-top: 10px;">
-              <a href="contact.html?service=Studio+Photography" class="btn btn-primary">Book Studio Session</a>
-              <a href="https://wa.me/919092028536?text=Hi%20Venus%20Studio,%20I%20want%20to%20book%20a%20Studio%20Photography%20session" target="_blank" rel="noopener" class="btn btn-secondary">WhatsApp Inquiry</a>
+
+            <div style="display: flex; gap: 14px; flex-wrap: wrap; margin-top: 18px;">
+              <a href="contact.html?service=Photography" class="btn btn-primary">Book Photography</a>
+              <a href="https://wa.me/919092028536?text=Hi%20Venus%20Studio,%20I%20want%20to%20inquire%20about%20Photography%20Services" target="_blank" rel="noopener" class="btn btn-secondary">WhatsApp Inquiry</a>
             </div>
           </div>
         </article>
 
-        <!-- 2. Customised Gifts -->
-        <article class="service-detail-card reverse reveal" id="gifts">
-          <div class="service-detail-image">
-            <img src="images/gifts.jpg" alt="Personalized and Customised Gift Items" loading="lazy">
-          </div>
-          <div class="service-detail-content">
-            <span class="section-label">Personalized Keepsakes</span>
-            <h3>Customised Gift Items</h3>
-            <p>
-              Celebrate life's memorable occasions with unique handcrafted gifts customized with your favorite photographs, warm messages, and artwork. From magic heat-reveal coffee mugs to glowing acrylic night lamps and customized frames, we turn memories into cherished tokens.
-            </p>
-            <div class="service-feature-checklist">
-              <div class="service-feature-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Magic Ceramic Coffee Mugs</span>
-              </div>
-              <div class="service-feature-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Custom Photo Collage Frames</span>
-              </div>
-              <div class="service-feature-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Acrylic 3D LED Night Lamps</span>
-              </div>
-              <div class="service-feature-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Personalized Cushions & Pillows</span>
-              </div>
-            </div>
-            <div style="display: flex; gap: 14px; flex-wrap: wrap; margin-top: 10px;">
-              <a href="contact.html?service=Customised+Gift+Items" class="btn btn-primary">Customize a Gift</a>
-              <a href="https://wa.me/919092028536?text=Hi%20Venus%20Studio,%20I%20want%20to%20order%20Customised%20Gifts" target="_blank" rel="noopener" class="btn btn-secondary">WhatsApp Inquiry</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- 3. Album Making -->
-        <article class="service-detail-card reveal" id="album">
-          <div class="service-detail-image">
-            <img src="images/album.jpg" alt="Premium Wedding Photo Album Designing and Making" loading="lazy">
-          </div>
-          <div class="service-detail-content">
-            <span class="section-label">Heirloom Quality</span>
-            <h3>Designer Album Making & Printing</h3>
-            <p>
-              Your wedding or milestone occasion deserves a showpiece album that never fades. We design customized lay-flat photobooks using Italian leather and velvet bindings, metallic gloss papers, non-tear sheets, and luxury presentation boxes designed to last generations.
-            </p>
-            <div class="service-feature-checklist">
-              <div class="service-feature-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Seamless Lay-Flat Panoramic Binding</span>
-              </div>
-              <div class="service-feature-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Velvet & Italian Leather Covers</span>
-              </div>
-              <div class="service-feature-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Scratch-Resistant Metallic Sheets</span>
-              </div>
-              <div class="service-feature-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Luxury Embossed Gift Suitcases</span>
-              </div>
-            </div>
-            <div style="display: flex; gap: 14px; flex-wrap: wrap; margin-top: 10px;">
-              <a href="contact.html?service=Photo+Album+Making" class="btn btn-primary">Order Custom Album</a>
-              <a href="https://wa.me/919092028536?text=Hi%20Venus%20Studio,%20I%20am%20interested%20in%20Wedding%20Album%20Making" target="_blank" rel="noopener" class="btn btn-secondary">WhatsApp Inquiry</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- 4. Videography -->
+        <!-- 2. Video & Cinematic -->
         <article class="service-detail-card reverse reveal" id="videography">
           <div class="service-detail-image">
             <img src="images/videography.jpg" alt="Cinematic 4K Videography and drone camera" loading="lazy">
           </div>
           <div class="service-detail-content">
-            <span class="section-label">Cinematic Motion</span>
-            <h3>4K Videography & Drone Cinematography</h3>
+            <span class="section-label">02. Cinematic Motion</span>
+            <h3>🎬 Video & Cinematic</h3>
             <p>
-              Relive your biggest events in vivid 4K Ultra-HD. Our videography team uses cinematic prime lenses, motorized 3-axis gimbals, licensed aerial drone perspectives, and live multi-camera vision mixers for LED walls and online live streaming.
+              High-definition storytelling filmed with cinema prime lenses, motorized stabilizers, licensed drone aerials, and dynamic editing for social media reels and big screen memories.
             </p>
-            <div class="service-feature-checklist">
-              <div class="service-feature-item">
+
+            <div class="service-items-grid">
+              <div class="service-item-chip">
                 <svg viewBox="0 0 24 24" fill="none" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>4K Ultra-HD Multi-Camera Rig</span>
+                <span>Wedding Videography</span>
               </div>
-              <div class="service-feature-item">
+              <div class="service-item-chip">
                 <svg viewBox="0 0 24 24" fill="none" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Licensed Aerial Drone Shoots</span>
+                <span>Cinematic Wedding Film</span>
               </div>
-              <div class="service-feature-item">
+              <div class="service-item-chip">
                 <svg viewBox="0 0 24 24" fill="none" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Cinematic Wedding Teasers</span>
+                <span>Highlight Video</span>
               </div>
-              <div class="service-feature-item">
+              <div class="service-item-chip">
                 <svg viewBox="0 0 24 24" fill="none" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Live LED Wall & YouTube Streaming</span>
+                <span>4K Ultra-HD Video</span>
+              </div>
+              <div class="service-item-chip">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Drone Photography & Video</span>
+              </div>
+              <div class="service-item-chip">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Instagram / YouTube Reels</span>
+              </div>
+              <div class="service-item-chip">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Short Promo Videos</span>
               </div>
             </div>
-            <div style="display: flex; gap: 14px; flex-wrap: wrap; margin-top: 10px;">
-              <a href="contact.html?service=Videography+%26+Drone" class="btn btn-primary">Book Videography Team</a>
-              <a href="https://wa.me/919092028536?text=Hi%20Venus%20Studio,%20I%20want%20to%20inquire%20about%20Cinematic%20Videography" target="_blank" rel="noopener" class="btn btn-secondary">WhatsApp Inquiry</a>
+
+            <div style="display: flex; gap: 14px; flex-wrap: wrap; margin-top: 18px;">
+              <a href="contact.html?service=Video+%26+Cinematic" class="btn btn-primary">Book Cinematic Crew</a>
+              <a href="https://wa.me/919092028536?text=Hi%20Venus%20Studio,%20I%20want%20to%20inquire%20about%20Cinematic%20Video" target="_blank" rel="noopener" class="btn btn-secondary">WhatsApp Inquiry</a>
             </div>
           </div>
         </article>
 
-        <!-- 5. Flex Printing -->
+        <!-- 3. Album & Photo Products -->
+        <article class="service-detail-card reveal" id="album">
+          <div class="service-detail-image">
+            <img src="images/album.jpg" alt="Premium Wedding Album and Framing" loading="lazy">
+          </div>
+          <div class="service-detail-content">
+            <span class="section-label">03. Heirlooms & Framing</span>
+            <h3>🖼️ Album & Photo Products</h3>
+            <p>
+              Preserve your memories for generations with archival-grade materials, Karizma lay-flat bindings, metallic gloss sheets, and custom designer framing suited for your home decor.
+            </p>
+
+            <div class="service-items-grid">
+              <div class="service-item-chip">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Premium Wedding Albums</span>
+              </div>
+              <div class="service-item-chip">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Karizma Albums</span>
+              </div>
+              <div class="service-item-chip">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Photo Album Designing</span>
+              </div>
+              <div class="service-item-chip">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>HD Photo Printing</span>
+              </div>
+              <div class="service-item-chip">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Photo Enlargement</span>
+              </div>
+              <div class="service-item-chip">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Photo Restoration</span>
+              </div>
+              <div class="service-item-chip">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Custom Photo Collage</span>
+              </div>
+              <div class="service-item-chip">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Custom Photo Frames</span>
+              </div>
+              <div class="service-item-chip">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>LED / Light Box Frames</span>
+              </div>
+              <div class="service-item-chip">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Acrylic / MDF / Wood Frames</span>
+              </div>
+              <div class="service-item-chip">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Canvas Prints</span>
+              </div>
+            </div>
+
+            <div style="display: flex; gap: 14px; flex-wrap: wrap; margin-top: 18px;">
+              <a href="contact.html?service=Album+%26+Photo+Products" class="btn btn-primary">Order Album / Frame</a>
+              <a href="https://wa.me/919092028536?text=Hi%20Venus%20Studio,%20I%20want%20to%20order%20Albums%20or%20Photo%20Frames" target="_blank" rel="noopener" class="btn btn-secondary">WhatsApp Inquiry</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 4. Customized Gifts -->
+        <article class="service-detail-card reverse reveal" id="gifts">
+          <div class="service-detail-image">
+            <img src="images/gifts.jpg" alt="Personalized and Customised Gift Items" loading="lazy">
+          </div>
+          <div class="service-detail-content">
+            <span class="section-label">04. Personalized Keepsakes</span>
+            <h3>🎁 Customized Gifts</h3>
+            <p>
+              Delight your loved ones and event guests with customized merchandise designed with love, personal pictures, and crisp color sublimation.
+            </p>
+
+            <div class="service-items-grid">
+              <div class="service-item-chip">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Custom Photo Mug</span>
+              </div>
+              <div class="service-item-chip">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Photo Keychain</span>
+              </div>
+              <div class="service-item-chip">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Customized Cushion</span>
+              </div>
+              <div class="service-item-chip">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>T-Shirt Printing</span>
+              </div>
+              <div class="service-item-chip">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Custom Photo Clock</span>
+              </div>
+              <div class="service-item-chip">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Personalized Gifts</span>
+              </div>
+              <div class="service-item-chip">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Corporate Gifts</span>
+              </div>
+              <div class="service-item-chip">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Wedding Return Gifts</span>
+              </div>
+            </div>
+
+            <div style="display: flex; gap: 14px; flex-wrap: wrap; margin-top: 18px;">
+              <a href="contact.html?service=Customized+Gifts" class="btn btn-primary">Customize a Gift</a>
+              <a href="https://wa.me/919092028536?text=Hi%20Venus%20Studio,%20I%20want%20to%20order%20Customized%20Gifts" target="_blank" rel="noopener" class="btn btn-secondary">WhatsApp Inquiry</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 5. Printing -->
         <article class="service-detail-card reveal" id="flex">
           <div class="service-detail-image">
-            <img src="images/flex.jpg" alt="Large format flex printing and banners" loading="lazy">
+            <img src="images/flex.jpg" alt="Large Format Printing and Flex Banners" loading="lazy">
           </div>
           <div class="service-detail-content">
-            <span class="section-label">Wide Format Print</span>
-            <h3>Flex & Banner Digital Printing</h3>
+            <span class="section-label">05. Wide Format & Print</span>
+            <h3>🖨️ Printing</h3>
             <p>
-              High-speed, large-format flex printing ready for any event size. We print grand wedding entrance arch designs, stage backdrops, political and social banners, vinyl stickers, and shop glow boards with UV-proof inks that stand strong against sun and rain.
+              High-speed, heavy-duty digital printing technology delivering vibrant, weatherproof banners, flex arches, promotional posters, and event stationery.
             </p>
-            <div class="service-feature-checklist">
-              <div class="service-feature-item">
+
+            <div class="service-items-grid">
+              <div class="service-item-chip">
                 <svg viewBox="0 0 24 24" fill="none" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Grand Wedding Entrance Arches</span>
+                <span>Large Size Photo Printing</span>
               </div>
-              <div class="service-feature-item">
+              <div class="service-item-chip">
                 <svg viewBox="0 0 24 24" fill="none" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Stage Backdrops & Temple Banners</span>
+                <span>Flex Printing</span>
               </div>
-              <div class="service-feature-item">
+              <div class="service-item-chip">
                 <svg viewBox="0 0 24 24" fill="none" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Waterproof & Sun-Resistant Inks</span>
+                <span>Banner Printing</span>
               </div>
-              <div class="service-feature-item">
+              <div class="service-item-chip">
                 <svg viewBox="0 0 24 24" fill="none" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Glow Sign Boards & Vinyl Cutouts</span>
+                <span>Poster Printing</span>
+              </div>
+              <div class="service-item-chip">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Photo Mounting</span>
+              </div>
+              <div class="service-item-chip">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Sticker & Vinyl Printing</span>
+              </div>
+              <div class="service-item-chip">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Invitation / Event Printing</span>
               </div>
             </div>
-            <div style="display: flex; gap: 14px; flex-wrap: wrap; margin-top: 10px;">
-              <a href="contact.html?service=Flex+%26+Banner+Printing" class="btn btn-primary">Request Flex Print Quote</a>
-              <a href="https://wa.me/919092028536?text=Hi%20Venus%20Studio,%20I%20need%20Flex%20Banner%20Printing" target="_blank" rel="noopener" class="btn btn-secondary">WhatsApp Inquiry</a>
+
+            <div style="display: flex; gap: 14px; flex-wrap: wrap; margin-top: 18px;">
+              <a href="contact.html?service=Printing" class="btn btn-primary">Request Print Quote</a>
+              <a href="https://wa.me/919092028536?text=Hi%20Venus%20Studio,%20I%20need%20Flex%20and%20Banner%20Printing" target="_blank" rel="noopener" class="btn btn-secondary">WhatsApp Inquiry</a>
             </div>
           </div>
         </article>
 
-        <!-- 6. Events & Functions -->
-        <article class="service-detail-card reverse reveal" id="events">
+        <!-- 6. AI Creative Services & Photo Restoration -->
+        <article class="service-detail-card reverse reveal" id="ai-creative">
           <div class="service-detail-image">
-            <img src="images/events.jpg" alt="All functions and programs event coverage" loading="lazy">
+            <img src="images/events.jpg" alt="AI Photo Restoration and Creative Technology" loading="lazy">
           </div>
           <div class="service-detail-content">
-            <span class="section-label">All Functions</span>
-            <h3>All Programs & Functions Coverage</h3>
+            <span class="section-label">06. Next-Gen Tech</span>
+            <h3>🤖 AI Creative Services & Restoration</h3>
             <p>
-              Whether it's a traditional South Indian marriage, betrothal, ear-piercing ceremony, housewarming (Gruhapravesam), birthday celebration, or school annual day, our complete production crew handles everything from photography to cinematography and live LED screens.
+              Leveraging advanced artificial intelligence workflows, generative enhancements, and deep neural restoration to revive damaged antique photos and generate surreal visual portraits.
             </p>
-            <div class="service-feature-checklist">
-              <div class="service-feature-item">
+
+            <div class="service-items-grid">
+              <div class="service-item-chip">
                 <svg viewBox="0 0 24 24" fill="none" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Grand Weddings & Receptions</span>
+                <span>AI Photo Restoration</span>
               </div>
-              <div class="service-feature-item">
+              <div class="service-item-chip">
                 <svg viewBox="0 0 24 24" fill="none" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Housewarming (Gruhapravesam)</span>
+                <span>AI Photo Enhancement</span>
               </div>
-              <div class="service-feature-item">
+              <div class="service-item-chip">
                 <svg viewBox="0 0 24 24" fill="none" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Ear-Piercing & Birthday Parties</span>
+                <span>AI Background Change</span>
               </div>
-              <div class="service-feature-item">
+              <div class="service-item-chip">
                 <svg viewBox="0 0 24 24" fill="none" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Temple Festivals & School Events</span>
+                <span>AI Portrait Creation</span>
+              </div>
+              <div class="service-item-chip">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>AI Wedding Photo Editing</span>
+              </div>
+              <div class="service-item-chip">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>AI Cinematic Photo Effects</span>
+              </div>
+              <div class="service-item-chip">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Old Photo Restoration</span>
+              </div>
+              <div class="service-item-chip">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>AI Photo-to-Video</span>
+              </div>
+              <div class="service-item-chip">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>AI Creative Reels</span>
+              </div>
+              <div class="service-item-chip">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Generative AI Designs</span>
               </div>
             </div>
-            <div style="display: flex; gap: 14px; flex-wrap: wrap; margin-top: 10px;">
-              <a href="contact.html?service=Complete+Event+Coverage" class="btn btn-primary">Book Event Coverage</a>
-              <a href="https://wa.me/919092028536?text=Hi%20Venus%20Studio,%20I%20want%20to%20book%20Event%20Coverage" target="_blank" rel="noopener" class="btn btn-secondary">WhatsApp Inquiry</a>
+
+            <div style="display: flex; gap: 14px; flex-wrap: wrap; margin-top: 18px;">
+              <a href="contact.html?service=AI+Creative+Services" class="btn btn-primary">Try AI Restoration</a>
+              <a href="https://wa.me/919092028536?text=Hi%20Venus%20Studio,%20I%20want%20AI%20Photo%20Restoration%20or%20Enhancement" target="_blank" rel="noopener" class="btn btn-secondary">WhatsApp Inquiry</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 7. Digital Creative Services -->
+        <article class="service-detail-card reveal" id="digital-creative">
+          <div class="service-detail-image">
+            <img src="images/bulk.jpg" alt="Digital Creative and Photoshop Editing Services" loading="lazy">
+          </div>
+          <div class="service-detail-content">
+            <span class="section-label">07. Post-Production Studio</span>
+            <h3>💻 Digital Creative Services</h3>
+            <p>
+              Professional Photoshop retouching, custom karizma album layouts, viral promotional video edits, and social media branding tailored for influencers and businesses.
+            </p>
+
+            <div class="service-items-grid">
+              <div class="service-item-chip">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Photoshop Editing</span>
+              </div>
+              <div class="service-item-chip">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Professional Retouching</span>
+              </div>
+              <div class="service-item-chip">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Wedding Album Designing</span>
+              </div>
+              <div class="service-item-chip">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Video Editing & Cutting</span>
+              </div>
+              <div class="service-item-chip">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Social Media Poster Design</span>
+              </div>
+              <div class="service-item-chip">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Instagram / Facebook Creative</span>
+              </div>
+              <div class="service-item-chip">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>YouTube Thumbnail Design</span>
+              </div>
+              <div class="service-item-chip">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Business Promotional Videos</span>
+              </div>
+            </div>
+
+            <div style="display: flex; gap: 14px; flex-wrap: wrap; margin-top: 18px;">
+              <a href="contact.html?service=Digital+Creative+Services" class="btn btn-primary">Request Creative Design</a>
+              <a href="https://wa.me/919092028536?text=Hi%20Venus%20Studio,%20I%20need%20Photoshop%20or%20Digital%20Creative%20Services" target="_blank" rel="noopener" class="btn btn-secondary">WhatsApp Inquiry</a>
             </div>
           </div>
         </article>
 
       </div>
 
-      <!-- CTA Banner -->
-      <div class="cta-banner reveal">
-        <h2>Need a Tailored Custom Package?</h2>
-        <p>Combine wedding photography, videography, album making, and stage flex printing into an all-in-one discounted celebration package.</p>
-        <div class="cta-banner-buttons">
-          <a href="contact.html" class="btn btn-primary">Get Package Pricing</a>
-          <a href="bulk-orders.html" class="btn btn-secondary">Explore Bulk Orders</a>
+      <!-- THE BIG GOLD & BLACK LUXURY MOTTO BANNER -->
+      <div class="motto-banner-premium reveal">
+        <div class="motto-badge">
+          <span>VENUS STUDIO SIGNATURE MOTTO</span>
+        </div>
+
+        <h2 class="motto-tamil">“தரம்... தலைமுறைக்கும்!”</h2>
+        <div class="motto-english">Quality for Today. Memories for Generations.</div>
+
+        <p class="motto-quote">
+          Photography, Albums, Frames, Printing மற்றும் AI Creative Technology ஆகியவற்றின் மூலம் ஒவ்வொரு நினைவையும் <strong>தரமாக உருவாக்கி, தலைமுறை தலைமுறைக்கும் பாதுகாக்கக்கூடிய நினைவாக</strong> வழங்குவதே VENUS STUDIO-வின் நோக்கம்.
+        </p>
+
+        <div class="motto-services-bar">
+          Photography <span>•</span> Videography <span>•</span> Digital Printing <span>•</span> Albums <span>•</span> Frames <span>•</span> Customized Gifts <span>•</span> AI Creative Studio
+        </div>
+
+        <div style="margin-top: 26px;">
+          <a href="contact.html" class="btn btn-primary">Book an Appointment</a>
         </div>
       </div>
     </section>
@@ -309,27 +519,28 @@
             <img src="images/logo.png" alt="Venus Studio Logo" class="nav-logo-img">
             <span class="nav-logo-text">Venus Studio</span>
           </div>
-          <p>Veppur's trusted photography studio and customized gifting destination. Celebrating life's precious moments since over a decade.</p>
+          <p>Veppur's trusted photography studio and customized gifting destination. Led by SENTHIL (20+ Years Experience, Photography Mentor & AI Trainer).</p>
         </div>
 
         <div class="footer-col">
           <h4>Services</h4>
           <ul>
-            <li><a href="services.html#photography">Studio Photography</a></li>
+            <li><a href="services.html#photography">Photography & Stills</a></li>
+            <li><a href="services.html#videography">Video & Cinematic</a></li>
+            <li><a href="services.html#album">Albums & Frames</a></li>
+            <li><a href="services.html#ai-creative">AI Creative & Restoration</a></li>
             <li><a href="services.html#gifts">Customised Gifts</a></li>
-            <li><a href="services.html#album">Album Making</a></li>
-            <li><a href="services.html#videography">Cinematic Video</a></li>
-            <li><a href="services.html#flex">Flex Printing</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
           <h4>Quick Links</h4>
           <ul>
+            <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About Us</a></li>
+            <li><a href="founder.html">Founder Profile</a></li>
             <li><a href="portfolio.html">Portfolio</a></li>
             <li><a href="bulk-orders.html">Bulk Orders</a></li>
-            <li><a href="contact.html">Contact & Location</a></li>
           </ul>
         </div>
 
@@ -337,7 +548,8 @@
           <h4>Contact</h4>
           <ul>
             <li>Main Road, X Road, Veppur, Tamil Nadu 606304</li>
-            <li><a href="tel:09994494537">099944 94537</a></li>
+            <li><a href="tel:09994494537">📞 99944 94537</a></li>
+            <li><a href="tel:07904036209">📞 79040 36209</a></li>
             <li><a href="https://wa.me/919092028536" target="_blank" rel="noopener">WhatsApp: +91 90920 28536</a></li>
             <li>Open Daily till 10 PM</li>
           </ul>
@@ -345,9 +557,10 @@
       </div>
 
       <div class="footer-bottom">
-        <p>&copy; 2026 Venus Studio. All rights reserved.</p>
+        <p>&copy; 2026 Venus Studio. All rights reserved. “தரம்... தலைமுறைக்கும்!”</p>
         <div class="footer-bottom-links">
           <a href="index.html">Home</a>
+          <a href="founder.html">Founder</a>
           <a href="about.html">About</a>
           <a href="contact.html">Contact</a>
         </div>

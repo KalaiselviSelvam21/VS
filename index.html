@@ -16,6 +16,14 @@
   <!-- Stylesheet & Favicon -->
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" type="image/png" href="images/logo.png">
+  <script>
+    (function() {
+      try {
+        var theme = localStorage.getItem('venus_theme') || 'dark';
+        document.documentElement.setAttribute('data-theme', theme);
+      } catch (e) {}
+    })();
+  </script>
 </head>
 <body>
 
@@ -31,17 +39,25 @@
         <ul class="nav-links" id="navLinks">
           <li><a href="index.html" class="active">Home</a></li>
           <li><a href="about.html">About</a></li>
+          <li><a href="founder.html">Founder</a></li>
           <li><a href="services.html">Services</a></li>
           <li><a href="portfolio.html">Portfolio</a></li>
           <li><a href="bulk-orders.html">Bulk Orders</a></li>
           <li><a href="contact.html" class="nav-cta">Book Now</a></li>
         </ul>
 
-        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
+        <div class="nav-actions">
+          <button class="theme-toggle-btn" id="themeToggle" aria-label="Toggle Black/White Theme" title="Toggle Black/White Theme">
+            <span class="theme-icon-light">☀️</span>
+            <span class="theme-icon-dark">🌙</span>
+          </button>
+
+          <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
       </div>
     </nav>
   </header>
@@ -84,6 +100,31 @@
       <div class="hero-scroll">
         <span>Scroll Down</span>
         <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- THE BIG GOLD & BLACK LUXURY MOTTO BANNER -->
+    <section class="container" style="position: relative; z-index: 10; margin-top: -20px;">
+      <div class="motto-banner-premium reveal">
+        <div class="motto-badge">
+          <span>VENUS STUDIO SIGNATURE MOTTO</span>
+        </div>
+
+        <h2 class="motto-tamil">“தரம்... தலைமுறைக்கும்!”</h2>
+        <div class="motto-english">Quality for Today. Memories for Generations.</div>
+
+        <p class="motto-quote">
+          “ஒரு Click... ஒரு வாழ்நாள் நினைவு.” — இன்று நாம் உருவாக்கும் ஒரு புகைப்படம், நாளை ஒரு நினைவாகவும், அடுத்த தலைமுறைக்கு ஒரு பொக்கிஷமாகவும் மாறுகிறது.
+        </p>
+
+        <div class="motto-services-bar">
+          Photography <span>•</span> Videography <span>•</span> Digital Printing <span>•</span> Albums <span>•</span> Frames <span>•</span> Customized Gifts <span>•</span> AI Creative Studio
+        </div>
+
+        <div style="margin-top: 24px; display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;">
+          <a href="founder.html" class="btn btn-primary">Meet Our Founder — செந்தில் (SENTHIL)</a>
+          <a href="services.html" class="btn btn-secondary">Explore All 7 Services</a>
+        </div>
       </div>
     </section>
 
@@ -487,7 +528,7 @@
                 </div>
                 <div class="contact-detail-text">
                   <h4>Phone & WhatsApp</h4>
-                  <p><a href="tel:09994494537">099944 94537</a> / <a href="https://wa.me/919092028536" target="_blank" rel="noopener">+91 90920 28536 (WhatsApp)</a></p>
+                  <p><a href="tel:09994494537">99944 94537</a> / <a href="tel:07904036209">79040 36209</a> / <a href="https://wa.me/919092028536" target="_blank" rel="noopener">+91 90920 28536 (WhatsApp)</a></p>
                 </div>
               </div>
 
@@ -536,13 +577,14 @@
                   <label for="service">Required Service *</label>
                   <select id="service" name="service" required>
                     <option value="" disabled selected>Select a Service</option>
-                    <option value="Studio Photography">Studio Photography / Portrait</option>
-                    <option value="Customised Gift Items">Customised Gift Items</option>
-                    <option value="Bulk Order Gifting">Bulk Orders / Corporate Gifts</option>
-                    <option value="Photo Album Making">Album Making & Designing</option>
-                    <option value="Videography & Drone">Videography & Live Streaming</option>
-                    <option value="Flex & Banner Printing">Flex Printing / Banners</option>
-                    <option value="Complete Event Coverage">All Programs & Functions Coverage</option>
+                    <option value="Wedding & Candid Photography">📸 Wedding & Candid Photography</option>
+                    <option value="4K Cinematic Video & Reels">🎬 4K Cinematic Video & Reels</option>
+                    <option value="Premium & Karizma Albums">🖼️ Premium & Karizma Albums / Frames</option>
+                    <option value="Customised Gift Items">🎁 Customised Gift Items</option>
+                    <option value="Flex & Banner Printing">🖨️ Flex & Banner Printing</option>
+                    <option value="AI Photo Restoration & Enhancement">🤖 AI Photo Restoration & Enhancement</option>
+                    <option value="Digital Creative & Photoshop Editing">💻 Digital Creative & Photoshop Retouching</option>
+                    <option value="Bulk Order Gifting">📦 Bulk Orders / Corporate Gifts</option>
                   </select>
                 </div>
                 <div class="form-group">
@@ -581,27 +623,28 @@
             <img src="images/logo.png" alt="Venus Studio Logo" class="nav-logo-img">
             <span class="nav-logo-text">Venus Studio</span>
           </div>
-          <p>Veppur's trusted photography studio and customized gifting destination. Celebrating life's precious moments since over a decade.</p>
+          <p>Veppur's trusted photography studio and customized gifting destination. Led by SENTHIL (20+ Years Experience, Photography Mentor & AI Trainer).</p>
         </div>
 
         <div class="footer-col">
           <h4>Services</h4>
           <ul>
-            <li><a href="services.html#photography">Studio Photography</a></li>
+            <li><a href="services.html#photography">Photography & Stills</a></li>
+            <li><a href="services.html#videography">Video & Cinematic</a></li>
+            <li><a href="services.html#album">Albums & Frames</a></li>
+            <li><a href="services.html#ai-creative">AI Creative & Restoration</a></li>
             <li><a href="services.html#gifts">Customised Gifts</a></li>
-            <li><a href="services.html#album">Album Making</a></li>
-            <li><a href="services.html#videography">Cinematic Video</a></li>
-            <li><a href="services.html#flex">Flex Printing</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
           <h4>Quick Links</h4>
           <ul>
+            <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About Us</a></li>
+            <li><a href="founder.html">Founder Profile</a></li>
             <li><a href="portfolio.html">Portfolio</a></li>
             <li><a href="bulk-orders.html">Bulk Orders</a></li>
-            <li><a href="contact.html">Contact & Location</a></li>
           </ul>
         </div>
 
@@ -609,7 +652,8 @@
           <h4>Contact</h4>
           <ul>
             <li>Main Road, X Road, Veppur, Tamil Nadu 606304</li>
-            <li><a href="tel:09994494537">099944 94537</a></li>
+            <li><a href="tel:09994494537">📞 99944 94537</a></li>
+            <li><a href="tel:07904036209">📞 79040 36209</a></li>
             <li><a href="https://wa.me/919092028536" target="_blank" rel="noopener">WhatsApp: +91 90920 28536</a></li>
             <li>Open Daily till 10 PM</li>
           </ul>
@@ -617,11 +661,12 @@
       </div>
 
       <div class="footer-bottom">
-        <p>&copy; 2026 Venus Studio. All rights reserved.</p>
+        <p>&copy; 2026 Venus Studio. All rights reserved. “தரம்... தலைமுறைக்கும்!”</p>
         <div class="footer-bottom-links">
-          <a href="#hero">Privacy</a>
-          <a href="#hero">Terms</a>
-          <a href="#contact">Support</a>
+          <a href="index.html">Home</a>
+          <a href="founder.html">Founder</a>
+          <a href="services.html">Services</a>
+          <a href="contact.html">Contact</a>
         </div>
       </div>
     </div>
