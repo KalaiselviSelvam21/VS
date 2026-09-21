@@ -272,20 +272,21 @@ ul {
 }
 
 .nav-logo-img {
-  width: 46px;
-  height: 46px;
+  width: 52px;
+  height: 52px;
   border-radius: 50%;
   display: block;
   object-fit: cover;
-  background-color: #ffffff;
-  border: 1.5px solid rgba(212, 168, 83, 0.5);
-  box-shadow: 0 0 15px rgba(212, 168, 83, 0.35);
+  background-color: #000000;
+  border: 2px solid var(--border-gold);
+  box-shadow: 0 0 18px rgba(212, 168, 83, 0.45);
   transition: transform 0.4s var(--ease-spring), box-shadow 0.4s var(--ease-out);
+  flex-shrink: 0;
 }
 
 .nav-logo:hover .nav-logo-img {
-  transform: scale(1.08);
-  box-shadow: 0 0 25px rgba(212, 168, 83, 0.55);
+  transform: scale(1.1) rotate(4deg);
+  box-shadow: 0 0 28px rgba(212, 168, 83, 0.65);
 }
 
 .nav-logo-text {
