@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // 2. Navbar Scrolled State
   const navbar = document.getElementById('navbar');
   window.addEventListener('scroll', () => {
-    if (window.scrollY > 40) {
+    if (window.scrollY > 20) {
       navbar.classList.add('scrolled');
     } else {
       navbar.classList.remove('scrolled');
@@ -178,7 +178,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Direct to WhatsApp after a brief delay
         setTimeout(() => {
-          window.open(`https://wa.me/919092028536?text=${waMessage}`, '_blank');
+          window.open(`https://wa.me/919994494537?text=${waMessage}`, '_blank');
         }, 800);
       });
     }
@@ -250,7 +250,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // 11. Founder Page Language Switcher (Tamil / English)
   const langBtns = document.querySelectorAll('.lang-btn');
   if (langBtns.length > 0) {
-    const setLanguage = (lang) => {
+    const setLanguage = (lang, saveUserChoice = false) => {
       document.body.classList.remove('lang-ta', 'lang-en');
       document.body.classList.add('lang-' + lang);
 
@@ -264,26 +264,26 @@ document.addEventListener('DOMContentLoaded', () => {
         document.title = "SENTHIL – Founder & Creative Photographer | VENUS STUDIO";
       }
 
-      try {
-        localStorage.setItem('venus_founder_lang', lang);
-      } catch (err) {
-        // localStorage fallback
+      if (saveUserChoice) {
+        try {
+          localStorage.setItem('venus_founder_lang_pref', lang);
+        } catch (err) {}
       }
     };
 
-    // Load stored language or default to Tamil ('ta')
-    let currentLang = 'ta';
+    // Load stored explicit user choice or strictly default to English ('en')
+    let currentLang = 'en';
     try {
-      currentLang = localStorage.getItem('venus_founder_lang') || 'ta';
+      currentLang = localStorage.getItem('venus_founder_lang_pref') || 'en';
     } catch (e) {
-      currentLang = 'ta';
+      currentLang = 'en';
     }
-    setLanguage(currentLang);
+    setLanguage(currentLang, false);
 
     langBtns.forEach(btn => {
       btn.addEventListener('click', () => {
         const lang = btn.getAttribute('data-lang');
-        setLanguage(lang);
+        setLanguage(lang, true);
       });
     });
   }
